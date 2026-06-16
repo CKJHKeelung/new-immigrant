@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基隆市立成功國中 - 114學年度新住民語文輔導團第4次到校訪視教案</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        philippine: {
+                            blue: '#0038a8',
+                            red: '#ce1126',
+                            yellow: '#fcd116',
+                            emerald: '#0f766e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Roulette Spinning Animation */
+        .spinning {
+            animation: spin 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(1080deg); }
+        }
+
+        /* Print optimization styling */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            html, body {
+                background: white !important;
+                color: black !important;
+                height: auto !important;
+                overflow: visible !important;
+                font-size: 12px;
+            }
+            main {
+                display: block !important;
+                overflow: visible !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .print-card {
+                border: 1px solid #cbd5e1 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+                margin-bottom: 24px;
+                display: block !important;
+                border-radius: 8px !important;
+            }
+            .print-header {
+                background: #f8fafc !important;
+                color: #0f172a !important;
+                border-bottom: 2px solid #0f172a !important;
+            }
+            table {
+                page-break-inside: auto;
+            }
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+        }
+
+        /* Language Toggle Classes */
+        body.lang-en .lang-zh { display: none !important; }
+        body.lang-zh .lang-en { display: none !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased lang-en">
+
+    <!-- Top Navigation / Banner for Advisory Group Visit -->
+    <header class="bg-gradient-to-r from-teal-800 via-indigo-900 to-slate-900 text-white shadow-xl no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3 text-center md:text-left">
+                <div class="bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md hidden sm:block">
+                    <span class="text-2xl">🇵🇭</span>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-teal-300 uppercase block">
+                        <span class="lang-en">Keelung Municipal Chenggong Junior High School</span>
+                        <span class="lang-zh">基隆市立成功國民中學</span>
+                    </span>
+                    <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        <span class="lang-en">4th Advisory Visit • Lesson Plan & Digital Materials</span>
+                        <span class="lang-zh">第 4 次到校訪視公開授課教案與數位教材</span>
+                    </h1>
+                </div>
+            </div>
+            
+            <!-- Language Switcher and Print Actions in Top Right -->
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <!-- Toggle Language Button -->
+                <button onclick="toggleLanguage()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2 rounded-xl text-sm font-bold transition flex items-center gap-2 shadow-lg shadow-amber-500/10">
+                    <i class="fa-solid fa-globe"></i> 
+                    <span class="lang-en">中文版 (ZH)</span>
+                    <span class="lang-zh">English (EN)</span>
+                </button>
+                
+                <!-- Link to Google Drive PDF (User Requested) -->
+                <a href="https://drive.google.com/file/d/1hna8OyjuKht66x26PTkNcykQhHRbNkkd/view?usp=sharing" target="_blank" class="bg-teal-600 hover:bg-teal-500 border border-teal-500/30 text-white px-4 py-2 rounded-xl text-sm font-bold transition flex items-center gap-2 shadow-md">
+                    <i class="fa-solid fa-file-pdf"></i> 
+                    <span class="lang-en">Print Plan (PDF)</span>
+                    <span class="lang-zh">列印教案 (PDF)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        
+        <!-- Source PDF Reference Ribbon -->
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-xl shadow-sm text-sm flex items-center gap-3 no-print">
+            <i class="fa-solid fa-file-pdf text-blue-600 text-lg"></i>
+            <span>
+                <strong class="text-blue-900">Reference Document:</strong> Based on the authorized lesson guidelines of <strong class="italic">"Filipino Lesson Plan.pdf"</strong>.
+            </span>
+        </div>
+
+        <!-- Course Meta Info Grid -->
+        <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden print-card">
+            <div class="bg-gradient-to-r from-indigo-50 to-teal-50/50 p-6 sm:p-8 border-b border-slate-100 flex flex-col md:flex-row justify-between gap-6">
+                <div class="space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold">
+                        <i class="fa-solid fa-map-location-dot"></i> Filipino Language Lesson
+                    </div>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                        <span class="lang-en">Unit Theme: Surviving in the Philippines (About Food)</span>
+                        <span class="lang-zh">單元主題：Surviving in the Philippines (關於食物與日常)</span>
+                    </h2>
+                    
+                    <p class="text-slate-500 text-sm max-w-2xl leading-relaxed">
+                        <span class="lang-en">This unit covers essential vocabulary and practical phrases for everyday life in the Philippines. Students will learn how to navigate public transportation, order food at restaurants, shop at local markets, and confidently explore the streets.</span>
+                        <span class="lang-zh">本單元涵蓋菲律賓日常生活中的核心詞彙與實用短語。學生將學習如何辨識、搭乘當地的公共交通工具、在餐廳點餐、在當地市場購物，並充滿自信地探索菲律賓的街道。</span>
+                    </p>
+                </div>
+                
+                <!-- Meta stats cards -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-150 shadow-sm min-w-[260px] flex flex-col justify-center space-y-2">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">
+                            <span class="lang-en">School:</span><span class="lang-zh">承辦學校：</span>
+                        </span> 
+                        <span class="font-bold text-indigo-700">
+                            <span class="lang-en">Chenggong JH</span><span class="lang-zh">成功國中</span>
+                        </span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Designer:</span> 
+                        <span class="font-semibold text-slate-800">John Marvin Raganas</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Grade Level:</span> 
+                        <span class="font-semibold text-slate-800">Grade 8</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Duration:</span> 
+                        <span class="font-semibold text-teal-700">45 mins (10:10-10:55)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Objectives & Rationale -->
+            <div class="p-6 sm:p-8 grid md:grid-cols-2 gap-8 bg-white">
+                <!-- Rationale Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <span class="p-2 rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-compass text-lg"></i></span>
+                        <h3 class="font-bold text-slate-800 text-lg">
+                            <span class="lang-en">Unit Overview: Rationale & Philosophy</span>
+                            <span class="lang-zh">設計理念與單元概述</span>
+                        </h3>
+                    </div>
+                    <blockquote class="border-l-4 border-indigo-500 pl-4 text-slate-600 italic leading-relaxed text-sm sm:text-base">
+                        <span class="lang-en">"Surviving in the Philippines covers essential vocabulary and practical phrases for everyday life. By equipping Grade 8 learners with realistic scenarios of navigation, ordering food, and local market shopping, they build the confidence to wander, communicate, and solve real-life challenges."</span>
+                        <span class="lang-zh">「"Surviving in the Philippines" 專注於日常生活必備單字與實用短語。藉由教導八年級學生如何問路指路、餐廳點餐及當地市場採購等真實情境，幫助學生建立探索世界的信心、提升日常溝通能力，並能自主解決生活中的各種挑戰。」</span>
+                    </blockquote>
+                </div>
+
+                <!-- Objectives Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <span class="p-2 rounded-lg bg-emerald-50 text-emerald-600"><i class="fa-solid fa-bullseye text-lg"></i></span>
+                        <h3 class="font-bold text-slate-800 text-lg">
+                            <span class="lang-en">Learning Objectives</span>
+                            <span class="lang-zh">學習目標</span>
+                        </h3>
+                    </div>
+                    
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">a</span>
+                            <span>
+                                <span class="lang-en">Identify basic vocabulary for common modes of transportation in the Philippines.</span>
+                                <span class="lang-zh">認讀與指認菲律賓常見公共交通工具的基本字彙。</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">b</span>
+                            <span>
+                                <span class="lang-en">Recognize familiar Filipino words for various places and destinations.</span>
+                                <span class="lang-zh">辨識日常生活中常見地點與目的地的菲律賓語單字。</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">c</span>
+                            <span>
+                                <span class="lang-en">Use essential conversational phrases to ask for and give simple commuting directions.</span>
+                                <span class="lang-zh">熟練運用核心溝通語句進行問路與交通路線引導。</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">d</span>
+                            <span>
+                                <span class="lang-en">Actively participate in interactive language drills and communicative games.</span>
+                                <span class="lang-zh">積極參與課堂語言演練與通勤互動遊戲（賓果/雙輪盤）。</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: INTERACTIVE CLASSROOM TOOLS (GAMES) -->
+        <section id="interactive-tools" class="no-print bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-800 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                <div>
+                    <span class="text-xs font-bold tracking-wider text-amber-400 uppercase">Interactive Teaching Aids • 數位輔助教具</span>
+                    <h3 class="text-2xl font-extrabold text-white mt-1">
+                        <span class="lang-en">Filipino Commute Hub & Games</span>
+                        <span class="lang-zh">菲律賓通勤互動發音與遊戲機</span>
+                    </h3>
+                </div>
+                
+                <!-- Tab Controls -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="switchTab('tab-vocab')" id="btn-tab-vocab" class="px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white transition">
+                        <i class="fa-solid fa-font mr-1"></i> 
+                        <span class="lang-en">Flashcards & Audio</span><span class="lang-zh">字彙閃卡與發音</span>
+                    </button>
+                    <button onclick="switchTab('tab-roulette')" id="btn-tab-roulette" class="px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-circle-notch mr-1"></i> 
+                        <span class="lang-en">Roulette Drill</span><span class="lang-zh">雙輪盤對話演練</span>
+                    </button>
+                    <button onclick="switchTab('tab-bingo')" id="btn-tab-bingo" class="px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-table-cells mr-1"></i> 
+                        <span class="lang-en">Commute Bingo</span><span class="lang-zh">通勤大賓果模擬</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subtab 1: Vocabulary Flashcards with Text-To-Speech -->
+            <div id="panel-vocab" class="space-y-6">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <!-- Taksi -->
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/50 flex flex-col items-center text-center space-y-3 cursor-pointer hover:border-indigo-500 transition group" onclick="speakPh('Taksi')">
+                        <div class="text-4xl">🚕</div>
+                        <h4 class="text-xl font-bold text-white tracking-wide">Taksi</h4>
+                        <p class="text-xs text-slate-400">
+                            <span class="lang-en">Taxi</span><span class="lang-zh">計程車</span>
+                        </p>
+                        <button class="text-xs bg-slate-700 group-hover:bg-indigo-600 px-3 py-1.5 rounded-lg text-slate-300 group-hover:text-white transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-high"></i> <span class="lang-en">Speak</span><span class="lang-zh">發音</span>
+                        </button>
+                    </div>
+                    <!-- Traysikel -->
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/50 flex flex-col items-center text-center space-y-3 cursor-pointer hover:border-indigo-500 transition group" onclick="speakPh('Traysikel')">
+                        <div class="text-4xl">🛺</div>
+                        <h4 class="text-xl font-bold text-white tracking-wide">Traysikel</h4>
+                        <p class="text-xs text-slate-400">
+                            <span class="lang-en">Tricycle</span><span class="lang-zh">三輪摩托車</span>
+                        </p>
+                        <button class="text-xs bg-slate-700 group-hover:bg-indigo-600 px-3 py-1.5 rounded-lg text-slate-300 group-hover:text-white transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-high"></i> <span class="lang-en">Speak</span><span class="lang-zh">發音</span>
+                        </button>
+                    </div>
+                    <!-- Bus -->
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/50 flex flex-col items-center text-center space-y-3 cursor-pointer hover:border-indigo-500 transition group" onclick="speakPh('Bus')">
+                        <div class="text-4xl">🚌</div>
+                        <h4 class="text-xl font-bold text-white tracking-wide">Bus</h4>
+                        <p class="text-xs text-slate-400">
+                            <span class="lang-en">Bus</span><span class="lang-zh">公共巴士</span>
+                        </p>
+                        <button class="text-xs bg-slate-700 group-hover:bg-indigo-600 px-3 py-1.5 rounded-lg text-slate-300 group-hover:text-white transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-high"></i> <span class="lang-en">Speak</span><span class="lang-zh">發音</span>
+                        </button>
+                    </div>
+                    <!-- Habal-habal -->
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/50 flex flex-col items-center text-center space-y-3 cursor-pointer hover:border-indigo-500 transition group" onclick="speakPh('Habal-habal')">
+                        <div class="text-4xl">🏍️</div>
+                        <h4 class="text-xl font-bold text-white tracking-wide">Habal-habal</h4>
+                        <p class="text-xs text-slate-400">
+                            <span class="lang-en">Motorcycle taxi</span><span class="lang-zh">摩托計程車</span>
+                        </p>
+                        <button class="text-xs bg-slate-700 group-hover:bg-indigo-600 px-3 py-1.5 rounded-lg text-slate-300 group-hover:text-white transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-high"></i> <span class="lang-en">Speak</span><span class="lang-zh">發音</span>
+                        </button>
+                    </div>
+                    <!-- Jeepney -->
+                    <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/50 flex flex-col items-center text-center space-y-3 cursor-pointer hover:border-indigo-500 transition group" onclick="speakPh('Jeepney')">
+                        <div class="text-4xl">🚙</div>
+                        <h4 class="text-xl font-bold text-white tracking-wide">Jeep / Dyip</h4>
+                        <p class="text-xs text-slate-400">
+                            <span class="lang-en">Jeepney</span><span class="lang-zh">吉普尼</span>
+                        </p>
+                        <button class="text-xs bg-slate-700 group-hover:bg-indigo-600 px-3 py-1.5 rounded-lg text-slate-300 group-hover:text-white transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-high"></i> <span class="lang-en">Speak</span><span class="lang-zh">發音</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Useful phrases helper -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+                    <h4 class="font-bold text-amber-400 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-quote-left"></i> 
+                        <span class="lang-en">Essential Commuting Phrases</span>
+                        <span class="lang-zh">日常通勤必備會話句型</span>
+                    </h4>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-800 transition" onclick="speakPh('Paano pumunta sa...')">
+                            <span class="text-xs text-indigo-400 font-bold uppercase tracking-wider block mb-1">
+                                <span class="lang-en">Ask for directions</span><span class="lang-zh">如何前往目的地</span>
+                            </span>
+                            <span class="text-lg font-bold text-white block">Paano pumunta sa...?</span>
+                            <span class="text-sm text-slate-400 block mt-1">
+                                <span class="lang-en">How to get to... ?</span><span class="lang-zh">要怎麼去（某處）呢？</span>
+                            </span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-800 transition" onclick="speakPh('Sumakay ka ng...')">
+                            <span class="text-xs text-teal-400 font-bold uppercase tracking-wider block mb-1">
+                                <span class="lang-en">Recommend vehicle</span><span class="lang-zh">建議搭乘載具</span>
+                            </span>
+                            <span class="text-lg font-bold text-white block">Sumakay ka ng...</span>
+                            <span class="text-sm text-slate-400 block mt-1">
+                                <span class="lang-en">Ride a...</span><span class="lang-zh">你可以搭乘...</span>
+                            </span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-800 transition" onclick="speakPh('Paabot po')">
+                            <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block mb-1">
+                                <span class="lang-en">Passing Fare</span><span class="lang-zh">請人幫忙傳遞車資</span>
+                            </span>
+                            <span class="text-lg font-bold text-white block">Paabot po.</span>
+                            <span class="text-sm text-slate-400 block mt-1">
+                                <span class="lang-en">Hand it, please.</span><span class="lang-zh">請幫忙遞傳（車資）。</span>
+                            </span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-800 transition" onclick="speakPh('Para po')">
+                            <span class="text-xs text-rose-400 font-bold uppercase tracking-wider block mb-1">
+                                <span class="lang-en">Stopping Vehicle</span><span class="lang-zh">司機下車呼喊</span>
+                            </span>
+                            <span class="text-lg font-bold text-white block">Para po!</span>
+                            <span class="text-sm text-slate-400 block mt-1">
+                                <span class="lang-en">Stop, please!</span><span class="lang-zh">請停車（我要下車）！</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtab 2: Roulette Practice Tool -->
+            <div id="panel-roulette" class="hidden space-y-6">
+                <div class="text-center max-w-lg mx-auto mb-4 text-sm text-slate-300">
+                    <span class="lang-en">Interactive classroom exercise: Click the spin button to randomly match a landmark with a transportation method, and let students practice speaking!</span>
+                    <span class="lang-zh">課堂口說演練：點擊下方按鈕同時旋轉「地點」與「交通」輪盤，並點選學生使用所產生的情境句型進行答問練習。</span>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-12 py-6">
+                    <!-- Wheel 1: Destination -->
+                    <div class="flex flex-col items-center space-y-4">
+                        <span class="text-xs font-bold tracking-wider text-indigo-400 uppercase">Roulette 1: Place 地點</span>
+                        <div class="relative w-42 h-42 rounded-full border-4 border-slate-700 bg-slate-800 flex items-center justify-center shadow-lg" id="wheel-place">
+                            <div class="absolute inset-2 rounded-full border border-dashed border-indigo-500/30 flex flex-col items-center justify-center text-center p-3">
+                                <span class="text-3xl mb-1" id="wheel-place-emoji">📍</span>
+                                <span class="text-base font-bold text-white" id="wheel-place-text">Spin Me!</span>
+                            </div>
+                        </div>
+                        <span class="text-sm text-slate-400" id="wheel-place-desc">
+                            <span class="lang-en">Destination</span><span class="lang-zh">目的地</span>
+                        </span>
+                    </div>
+
+                    <!-- Spin Button -->
+                    <div class="flex flex-col items-center space-y-3">
+                        <button onclick="spinBoth()" id="btn-spin" class="w-16 h-16 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 flex items-center justify-center text-2xl font-bold shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95 transition">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <span class="text-xs font-bold text-amber-400 tracking-widest">SPIN</span>
+                    </div>
+
+                    <!-- Wheel 2: Transportation -->
+                    <div class="flex flex-col items-center space-y-4">
+                        <span class="text-xs font-bold tracking-wider text-teal-400 uppercase">Roulette 2: Vehicle 載具</span>
+                        <div class="relative w-42 h-42 rounded-full border-4 border-slate-700 bg-slate-800 flex items-center justify-center shadow-lg" id="wheel-transport">
+                            <div class="absolute inset-2 rounded-full border border-dashed border-teal-500/30 flex flex-col items-center justify-center text-center p-3">
+                                <span class="text-3xl mb-1" id="wheel-transport-emoji">🚗</span>
+                                <span class="text-base font-bold text-white" id="wheel-transport-text">Spin Me!</span>
+                            </div>
+                        </div>
+                        <span class="text-sm text-slate-400" id="wheel-transport-desc">
+                            <span class="lang-en">Transportation</span><span class="lang-zh">乘車方式</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Target Dialogue Box -->
+                <div class="bg-slate-850 rounded-2xl p-5 border border-slate-800 max-w-2xl mx-auto text-center space-y-3 shadow-inner" id="dialogue-box">
+                    <span class="text-xs font-bold text-slate-400 block uppercase">
+                        <span class="lang-en">Dialogue Practice Pattern</span><span class="lang-zh">會話演練句型指引</span>
+                    </span>
+                    <div class="space-y-2">
+                        <div class="text-lg"><span class="text-indigo-400 font-bold">Q:</span> "Paano pumunta sa <span class="text-indigo-300 font-bold underline" id="dialogue-place">______</span>?"</div>
+                        <div class="text-lg"><span class="text-teal-400 font-bold">A:</span> "Sumakay ka ng <span class="text-teal-300 font-bold underline" id="dialogue-vehicle">______</span>."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtab 3: Commute Bingo Game Simulator -->
+            <div id="panel-bingo" class="hidden space-y-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-slate-300">
+                        <span class="lang-en">Mingle and ask classmates about destinations on your Bingo card. Once 8 boxes are stamped, shout <strong class="text-red-400">"Para po!"</strong> to win!</span>
+                        <span class="lang-zh">走入同學群中，互相用口頭菲語詢問目的地交通方式。成功連線集滿 8 個格子時大喊 <strong class="text-red-400">"Para po!"</strong> 宣告勝出！</span>
+                    </p>
+                    <button onclick="generateNewBingo()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition">
+                        <i class="fa-solid fa-arrows-rotate mr-1"></i> 
+                        <span class="lang-en">Generate Random Board</span><span class="lang-zh">生成全新賓果卡</span>
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-6 items-center">
+                    <!-- Bingo Card Grid Container -->
+                    <div class="md:col-span-8 bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                        <div class="text-center mb-4"><span class="text-lg font-bold tracking-wider text-white">COMMUTE BINGO CARD</span></div>
+                        <div class="grid grid-cols-3 gap-3" id="bingo-grid">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Role Card Showcase info panel -->
+                    <div class="md:col-span-4 bg-slate-850 p-5 rounded-2xl border border-slate-800 space-y-4">
+                        <div class="text-center pb-2 border-b border-slate-800">
+                            <span class="text-xs font-bold text-amber-400 block">
+                                <span class="lang-en">Student Role Card Sample</span><span class="lang-zh">學生個人分配手牌卡（範例）</span>
+                            </span>
+                        </div>
+                        <div class="bg-gradient-to-br from-indigo-950 to-slate-900 p-4 rounded-xl border border-indigo-800/50 space-y-3 shadow-lg">
+                            <div>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest block">📍 Destination</span>
+                                <span class="text-lg font-bold text-white block">Palengke <span class="text-xs text-slate-400">(Market / 市場)</span></span>
+                            </div>
+                            <div class="pt-2 border-t border-indigo-900/40">
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest block">🛺 Transportation Mode</span>
+                                <span class="text-lg font-bold text-teal-400 block">Traysikel <span class="text-xs text-slate-400">(Tricycle / 三輪車)</span></span>
+                            </div>
+                        </div>
+                        <p class="text-[11.5px] text-slate-400 leading-relaxed italic">
+                            <span class="lang-en">When classmates ask you "Paano pumunta sa Palengke?", you must reply with "Sumakay ka ng Traysikel."</span>
+                            <span class="lang-zh">當同學走向你並詢問 "Paano pumunta sa Palengke?" 時，你必須誠實回答 "Sumakay ka ng Traysikel."</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TEACHING PROCEDURE (THE PLAN TABLE) -->
+        <section class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden print-card">
+            <div class="bg-gradient-to-r from-slate-900 to-indigo-950 text-white p-6 sm:px-8 py-5 flex justify-between items-center print-header">
+                <div class="space-y-1">
+                    <span class="text-xs font-bold tracking-wider text-teal-300 uppercase">
+                        <span class="lang-en">LESSON TIMELINE</span>
+                        <span class="lang-zh">教學程序與時程計畫表</span>
+                    </span>
+                    <h3 class="text-xl font-bold">
+                        <span class="lang-en">Teaching Procedure Schedule</span>
+                        <span class="lang-zh">課堂授課流程與時間配當</span>
+                    </h3>
+                </div>
+                <div class="text-sm bg-white/10 px-3 py-1 rounded-lg border border-white/20 no-print">
+                    <span class="lang-en">Total: 45 Minutes</span>
+                    <span class="lang-zh">總計時間：45 分鐘</span>
+                </div>
+            </div>
+
+            <!-- Table Structure responsive -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-200 text-slate-600 text-xs font-bold uppercase">
+                            <th class="py-4 px-6 w-2/12 text-center">
+                                <span class="lang-en">Stage</span><span class="lang-zh">階段</span>
+                            </th>
+                            <th class="py-4 px-6 w-5/12">
+                                <span class="lang-en">Teaching Procedure</span><span class="lang-zh">教學步驟細節</span>
+                            </th>
+                            <th class="py-4 px-6 w-1/12 text-center">
+                                <span class="lang-en">Time</span><span class="lang-zh">時間</span>
+                            </th>
+                            <th class="py-4 px-6 w-2/12">
+                                <span class="lang-en">Teaching Material</span><span class="lang-zh">教學資源</span>
+                            </th>
+                            <th class="py-4 px-6 w-2/12">
+                                <span class="lang-en">Assessment</span><span class="lang-zh">教學評量方式</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-sm text-slate-600">
+                        
+                        <!-- Step 1: Preliminaries -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Preliminaries</span><span class="lang-zh">課前問候</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-2">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Greeting & Small Talk</span>
+                                    <span class="lang-zh">師生相見歡與日常問答</span>
+                                </h4>
+                                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-500">
+                                    <li>
+                                        <span class="lang-en">Greet the students: <strong>"Magandang Umaga!"</strong></span>
+                                        <span class="lang-zh">與學生互道早安：<strong>"Magandang Umaga!"</strong> (早安！)</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">Ask how they are: <strong>"Kumusta ka?"</strong></span>
+                                        <span class="lang-zh">詢問近況與心情：<strong>"Kumusta ka?"</strong> (你好嗎？)</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">Ask about the weather: <strong>"Kumusta ang panahon ngayon?"</strong></span>
+                                        <span class="lang-zh">討論今天的天氣狀況：<strong>"Kumusta ang panahon ngayon?"</strong> (今天天氣如何？)</span>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">5 mins</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-desktop text-slate-500"></i> Interactive board presentation</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Students respond appropriately.</span>
+                                <span class="lang-zh">學生能以對應語境做出正確的回應與對話。</span>
+                            </td>
+                        </tr>
+
+                        <!-- Step 2: Preparation -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Preparation</span><span class="lang-zh">課前引導</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-2">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Transportation Guess & Encircle</span>
+                                    <span class="lang-zh">菲律賓特色通勤載具大猜謎</span>
+                                </h4>
+                                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-500">
+                                    <li>
+                                        <span class="lang-en">Show different pictures of common transportation means.</span>
+                                        <span class="lang-zh">大螢幕秀出菲律賓各種常見交通工具與街頭風情照片。</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">Let students guess and encircle which are the most common transportation in the Philippines.</span>
+                                        <span class="lang-zh">邀約學生上前上台圈選出他們認為在當地最普及的交通形式。</span>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">-</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-image text-slate-500"></i> Local transportation pictures</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Students participate by encircling the pictures.</span>
+                                <span class="lang-zh">學生熱烈舉手並主動上台圈選。</span>
+                            </td>
+                        </tr>
+
+                        <!-- Step 3: Presentation -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Presentation</span><span class="lang-zh">核心授課</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-3">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Core Vocabulary & Phraseology</span>
+                                    <span class="lang-zh">本課重點字彙與會話教授</span>
+                                </h4>
+                                
+                                <div class="space-y-1.5">
+                                    <span class="text-xs font-bold text-indigo-600 block">[PART 1: TRANSPORTATION VOCABULARY & TRIVIA]</span>
+                                    <p class="text-xs text-slate-500 leading-normal">
+                                        <span class="lang-en"><strong>Discussion:</strong> Introduce and discuss the most common modes of transportation in the Philippines.</span>
+                                        <span class="lang-zh"><strong>互動探討：</strong>介紹並深度探索菲律賓生活最不可或缺的通勤文化。</span>
+                                    </p>
+                                    <p class="text-xs text-slate-500 leading-normal">
+                                        <span class="lang-en"><strong>Vocabulary:</strong> Introduce the vehicles: Taksi (Taxi), Traysikel (Tricycle), Bus, Habal-habal (Motorcycle taxi), and Jeep/Dyip (Jeepney).</span>
+                                        <span class="lang-zh"><strong>生字解析：</strong>講授五大核心載具 Taksi (計程車)、Traysikel (三輪車)、Bus (巴士)、Habal-habal (摩托計程車) 及 Dyip/Jeepney (吉普尼)。</span>
+                                    </p>
+                                    <p class="text-xs text-slate-500 italic">
+                                        <span class="lang-en"><strong>Pronunciation Drill:</strong> Have the students repeat and practice pronouncing each word aloud.</span>
+                                        <span class="lang-zh"><strong>拼讀演練：</strong>師生全班齊讀，修正並加強單字重音位置。</span>
+                                    </p>
+                                </div>
+
+                                <div class="space-y-1.5 pt-2 border-t border-slate-100">
+                                    <span class="text-xs font-bold text-indigo-600 block">[PART 2: PLACES REVIEW]</span>
+                                    <p class="text-xs text-slate-500 leading-normal">
+                                        <span class="lang-en">Briefly review common locations and landmarks, asking students to recall or guess their Filipino translations.</span>
+                                        <span class="lang-zh">快速複習生活中的八大常用景點名稱，邀請學生拼出對應的菲律賓語。</span>
+                                    </p>
+                                </div>
+
+                                <div class="space-y-1.5 pt-2 border-t border-slate-100">
+                                    <span class="text-xs font-bold text-indigo-600 block">[PART 3: COMMUTING PHRASES]</span>
+                                    <p class="text-xs text-slate-500 leading-normal">
+                                        <span class="lang-en">Show contextual pictures and let students guess the correct phrases. Introduce daily commute phrases: <br>a. <em>Paano pumunta sa...?</em> <br>b. <em>Sumakay ka ng...</em> <br>c. <em>Paabot po.</em> <br>d. <em>Para po!</em></span>
+                                        <span class="lang-zh">播放情境圖引導同學猜測應答短語。帶入四大基本句型：<br>a. <em>Paano pumunta sa...?</em> (如何去...？)<br>b. <em>Sumakay ka ng...</em> (搭乘...)<br>c. <em>Paabot po.</em> (請幫忙傳遞車資)<br>d. <em>Para po!</em> (停車請在此下車)</span>
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">15 mins</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-desktop text-slate-500"></i> Interactive board presentation</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Students participate and recite.</span>
+                                <span class="lang-zh">考察學生在課堂中的複誦流暢度與理解反應。</span>
+                            </td>
+                        </tr>
+
+                        <!-- Step 4: Roulette Practice -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Practice</span><span class="lang-zh">雙輪盤演練</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-2">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Double Roulette Speaking Drill</span>
+                                    <span class="lang-zh">對稱式雙輪盤即興造句</span>
+                                </h4>
+                                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-500">
+                                    <li>
+                                        <span class="lang-en">Show two dynamic roulettes on screen.</span>
+                                        <span class="lang-zh">投影雙輪盤，隨機邀請班上同學上台點擊轉盤。</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">Call random students to roll and practice the combined sentence structures.</span>
+                                        <span class="lang-zh">根據隨機轉出的結果套入公式，練習回答：地點與對應建議交通方式。</span>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">5 mins</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-gamepad text-slate-500"></i> Interactive Board Roulette</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Oral participation and syntax accuracy.</span>
+                                <span class="lang-zh">學生口語發言積極度及應對速度。</span>
+                            </td>
+                        </tr>
+
+                        <!-- Step 5: Production -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Production</span><span class="lang-zh">小組實踐</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-2">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Commute Bingo Challenge</span>
+                                    <span class="lang-zh">全員大走動：通勤大賓果競賽</span>
+                                </h4>
+                                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-500">
+                                    <li>
+                                        <span class="lang-en">Distribute Bingo cards (8 destination slots) and role cards.</span>
+                                        <span class="lang-zh">發給全體同學個人 8 格賓果卡與身分交通工具角色卡。</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">Instruct students to mingle and find classmates with matching destinations using Filipino phrases.</span>
+                                        <span class="lang-zh">學生在座位間走動，與同學展開菲語問答 "Paano pumunta sa [地點]?"。</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">The respondent replies "Sumakay ka ng [vehicle]" to let the inquirer write down the answer.</span>
+                                        <span class="lang-zh">被問者依據自己手牌回答 "Sumakay ka ng [交通工具]"。</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">First to complete the line shouts <strong>"Para po!"</strong> to be crowned the winner.</span>
+                                        <span class="lang-zh">最快集滿拼圖連成線的人大喊 <strong>"Para po!"</strong> 宣告贏家。</span>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">15 mins</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-file-invoice text-slate-500"></i> Printed Bingo worksheets</span><br>
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-marker text-slate-500"></i> Hand markers</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Observational speech evaluation; grammar correct use.</span>
+                                <span class="lang-zh">觀察學生對話過程中是否主動運用正確句型交流。</span>
+                            </td>
+                        </tr>
+
+                        <!-- Step 6: Wrap-Up -->
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="py-5 px-6 font-bold text-indigo-700 text-center">
+                                <span class="inline-block px-2.5 py-1 bg-indigo-50 rounded-lg">
+                                    <span class="lang-en">Wrap-Up</span><span class="lang-zh">課堂統整</span>
+                                </span>
+                            </td>
+                            <td class="py-5 px-6 space-y-2">
+                                <h4 class="font-bold text-slate-900">
+                                    <span class="lang-en">Cultural Reflection & Extension</span>
+                                    <span class="lang-zh">跨文化比較與下課反思</span>
+                                </h4>
+                                <ul class="list-disc pl-4 space-y-1.5 text-xs text-slate-500">
+                                    <li>
+                                        <span class="lang-en">What is one thing you find interesting about Filipino transportation?</span>
+                                        <span class="lang-zh">探討：你覺得菲律賓最令人印象深刻或有趣的交通工具是什麼？為什麼？</span>
+                                    </li>
+                                    <li>
+                                        <span class="lang-en">What is one thing you think you want to bring to Taiwan?</span>
+                                        <span class="lang-zh">思考：若可以，你會想引進什麼交通工具到台灣？</span>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="py-5 px-6 font-bold text-center text-slate-900">5 mins</td>
+                            <td class="py-5 px-6 text-xs space-y-1">
+                                <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md"><i class="fa-solid fa-desktop text-slate-500"></i> Interactive Board Slide</span>
+                            </td>
+                            <td class="py-5 px-6 text-xs text-slate-500">
+                                <span class="lang-en">Evaluate students' reflections and active participation.</span>
+                                <span class="lang-zh">評估學生發表與對課堂教學回饋的反思深度。</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs text-center no-print mt-12">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>
+                <span class="lang-en">Keelung Municipal Chenggong Junior High School</span>
+                <span class="lang-zh">基隆市立成功國民中學</span>
+            </p>
+            <p class="text-slate-500">
+                <span class="lang-en">Lesson Designer: John Marvin Raganas | Interactive Portal System © 2026</span>
+                <span class="lang-zh">教學設計：John Marvin Raganas | 數位互動網頁系統 © 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts for Game Logic & Audio Synthesis -->
+    <script>
+        
+        // Active Language Global State
+        let currentLang = 'en';
+
+        // Toggle Language Function
+        function toggleLanguage() {
+            if (currentLang === 'en') {
+                currentLang = 'zh';
+                document.body.className = "bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased lang-zh";
+            } else {
+                currentLang = 'en';
+                document.body.className = "bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased lang-en";
+            }
+            // Update active subtabs if they have dynamic text elements
+            if (!document.getElementById('panel-bingo').classList.contains('hidden')) {
+                generateNewBingo();
+            }
+        }
+
+        // Tab switching logic
+        function switchTab(tabId) {
+            // Panels
+            document.getElementById('panel-vocab').classList.add('hidden');
+            document.getElementById('panel-roulette').classList.add('hidden');
+            document.getElementById('panel-bingo').classList.add('hidden');
+            
+            // Buttons
+            document.getElementById('btn-tab-vocab').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+            document.getElementById('btn-tab-roulette').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+            document.getElementById('btn-tab-bingo').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+
+            if (tabId === 'tab-vocab') {
+                document.getElementById('panel-vocab').classList.remove('hidden');
+                document.getElementById('btn-tab-vocab').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white transition";
+            } else if (tabId === 'tab-roulette') {
+                document.getElementById('panel-roulette').classList.remove('hidden');
+                document.getElementById('btn-tab-roulette').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white transition";
+            } else if (tabId === 'tab-bingo') {
+                document.getElementById('panel-bingo').classList.remove('hidden');
+                document.getElementById('btn-tab-bingo').className = "px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white transition";
+                generateNewBingo(); // Auto generate first board
+            }
+        }
+
+        // Web Speech API wrapper for pronunciation assistance
+        function speakPh(text) {
+            if ('speechSynthesis' in window) {
+                // Cancel ongoing speak to prevent stacking
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                const voices = window.speechSynthesis.getVoices();
+                let chosenVoice = null;
+                
+                // Try selecting Spanish (es) voice for close phonetic alignment with Filipino vowels
+                chosenVoice = voices.find(v => v.lang.startsWith('es') || v.lang.startsWith('fil') || v.lang.startsWith('tl'));
+                if (!chosenVoice) {
+                    chosenVoice = voices.find(v => v.lang.startsWith('en')); // Fallback to English
+                }
+                
+                if (chosenVoice) {
+                    utterance.voice = chosenVoice;
+                }
+                utterance.rate = 0.85; // slightly slower for language learners
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Data arrays for roulette and bingo
+        const places = [
+            { name: "Simbahan", trEn: "Church", trZh: "教堂", emoji: "⛪" },
+            { name: "Paaralan", trEn: "School", trZh: "學校", emoji: "🏫" },
+            { name: "Palengke", trEn: "Market", trZh: "市場", emoji: "🛒" },
+            { name: "Ospital", trEn: "Hospital", trZh: "醫院", emoji: "🏥" },
+            { name: "Parke", trEn: "Park", trZh: "公園", emoji: "🌳" },
+            { name: "Plasa", trEn: "Plaza", trZh: "廣場", emoji: "🏛️" },
+            { name: "Baybayin", trEn: "Beach", trZh: "海灘", emoji: "🏖️" },
+            { name: "Mall", trEn: "Mall", trZh: "購物中心", emoji: "🏬" }
+        ];
+
+        const transports = [
+            { name: "Taksi", trEn: "Taxi", trZh: "計程車", emoji: "🚕" },
+            { name: "Traysikel", trEn: "Tricycle", trZh: "三輪摩托車", emoji: "🛺" },
+            { name: "Bus", trEn: "Bus", trZh: "公共巴士", emoji: "🚌" },
+            { name: "Habal-habal", trEn: "Motorcycle taxi", trZh: "摩托計程車", emoji: "🏍️" },
+            { name: "Dyip / Jeepney", trEn: "Jeepney", trZh: "吉普尼", emoji: "🚙" }
+        ];
+
+        // Spinning simulation logic
+        function spinBoth() {
+            const btn = document.getElementById('btn-spin');
+            btn.disabled = true;
+
+            const wheelPlace = document.getElementById('wheel-place');
+            const wheelTransport = document.getElementById('wheel-transport');
+
+            // Add spin classes
+            wheelPlace.classList.add('spinning');
+            wheelTransport.classList.add('spinning');
+
+            // Play retro game beep
+            playSimpleBeep(600, 0.12);
+
+            setTimeout(() => {
+                // Pick random items
+                const randomPlace = places[Math.floor(Math.random() * places.length)];
+                const randomTransport = transports[Math.floor(Math.random() * transports.length)];
+
+                // Stop animation
+                wheelPlace.classList.remove('spinning');
+                wheelTransport.classList.remove('spinning');
+
+                // Render dynamic text values
+                document.getElementById('wheel-place-emoji').innerText = randomPlace.emoji;
+                document.getElementById('wheel-place-text').innerText = randomPlace.name;
+                document.getElementById('wheel-place-desc').innerHTML = `
+                    <span class="lang-en">${randomPlace.trEn}</span>
+                    <span class="lang-zh">${randomPlace.trZh}</span>
+                `;
+
+                document.getElementById('wheel-transport-emoji').innerText = randomTransport.emoji;
+                document.getElementById('wheel-transport-text').innerText = randomTransport.name;
+                document.getElementById('wheel-transport-desc').innerHTML = `
+                    <span class="lang-en">${randomTransport.trEn}</span>
+                    <span class="lang-zh">${randomTransport.trZh}</span>
+                `;
+
+                // Update Dialogue Pattern Guides
+                document.getElementById('dialogue-place').innerText = randomPlace.name;
+                document.getElementById('dialogue-vehicle').innerText = randomTransport.name;
+
+                // Play success tone
+                playSimpleBeep(880, 0.2);
+
+                btn.disabled = false;
+            }, 1200);
+        }
+
+        // Synth audio helper
+        function playSimpleBeep(freq, duration) {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.04, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + duration);
+            } catch (e) {
+                // Catch any audio context blocking errors quietly
+            }
+        }
+
+        // Bingo card generator
+        function generateNewBingo() {
+            const grid = document.getElementById('bingo-grid');
+            grid.innerHTML = '';
+
+            // Shuffle places and grab top 8, leaving middle square as FREE / "Para po!"
+            const shuffledPlaces = [...places].sort(() => 0.5 - Math.random());
+            const boardPlaces = shuffledPlaces.slice(0, 8);
+            
+            // Insert FREE square in position 4
+            boardPlaces.splice(4, 0, { name: "Para po!", trEn: "Stop! (FREE)", trZh: "停車! (免填)", emoji: "🛑", isFree: true });
+
+            boardPlaces.forEach((place, index) => {
+                const cell = document.createElement('div');
+                cell.className = "p-4 rounded-xl flex flex-col items-center justify-center text-center cursor-pointer transition select-none ";
+                
+                if (place.isFree) {
+                    cell.className += "bg-gradient-to-r from-rose-600 to-red-600 text-white border border-red-500 font-extrabold shadow-md shadow-red-500/20";
+                    cell.innerHTML = `
+                        <span class="text-2xl">${place.emoji}</span>
+                        <span class="text-sm block mt-1">${place.name}</span>
+                        <span class="text-[10px] opacity-95 block">
+                            <span class="lang-en">${place.trEn}</span><span class="lang-zh">${place.trZh}</span>
+                        </span>
+                    `;
+                } else {
+                    cell.className += "bg-slate-900 text-slate-100 hover:bg-slate-850 border border-slate-700/50 hover:border-indigo-500";
+                    cell.innerHTML = `
+                        <span class="text-2xl mb-1">${place.emoji}</span>
+                        <span class="text-sm font-bold block text-slate-200">${place.name}</span>
+                        <span class="text-[10px] text-slate-400 block mb-2">
+                            <span class="lang-en">${place.trEn}</span><span class="lang-zh">${place.trZh}</span>
+                        </span>
+                        <span class="text-[9px] mt-1 px-1.5 py-0.5 rounded-md bg-slate-800 text-indigo-400 font-semibold uppercase tracking-wider block" id="transport-stamp-${index}">
+                            <span class="lang-en">Mark Stamp</span><span class="lang-zh">點擊標記</span>
+                        </span>
+                    `;
+                    cell.onclick = () => stampBingoSquare(index);
+                }
+                grid.appendChild(cell);
+            });
+        }
+
+        // Simulate interactive stamp in bingo square
+        function stampBingoSquare(index) {
+            const stamp = document.getElementById(`transport-stamp-${index}`);
+            if (!stamp || (!stamp.innerText.includes("Mark Stamp") && !stamp.innerText.includes("點擊標記"))) return;
+
+            // Select random transportation stamp
+            const randomTransport = transports[Math.floor(Math.random() * transports.length)];
+            stamp.innerHTML = `🚌 ${randomTransport.name}`;
+            stamp.className = "text-[9px] mt-2 px-1.5 py-0.5 rounded-md bg-indigo-900/50 text-indigo-200 font-bold border border-indigo-700/30 block";
+            
+            playSimpleBeep(700, 0.08);
+        }
+
+        // Start page on vocab deck by default
+        window.onload = function() {
+            switchTab('tab-vocab');
+        };
+    </script>
+</body>
+</html>
